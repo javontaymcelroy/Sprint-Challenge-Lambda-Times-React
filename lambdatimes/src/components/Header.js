@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// STYLES START HERE:
+
 const Nav = styled.div`
   display: flex;
   justify-content: space-between;
@@ -30,6 +32,8 @@ const Nav = styled.div`
     letter-spacing: 1px;
   }
 `;
+
+// STYLES END ^
 
 const Date = styled.span`
   margin-left: 25px;

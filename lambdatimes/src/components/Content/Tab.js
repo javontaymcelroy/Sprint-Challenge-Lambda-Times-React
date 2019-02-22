@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-/* Using your props, determine if the `tab` prop matches the `selectedTab` prop,
-      if they match, the className should be: 'tab active-tab',
-      if it is not it should just be 'tab'*/
+// STYLES START HERE:
 
 const SelectedTab = styled.div`
   background-color: red;
@@ -44,6 +43,8 @@ const Tabs = styled.div`
   }
 `;
 
+// STYLES END HERE ^
+
 const Tab = props => {
   const selectedClass = props.SelectedTab;
 
@@ -72,6 +73,13 @@ const Tab = props => {
   );
 };
 
-// Make sure you include PropTypes on your props.
+// PROPTYPES:
+
+Tab.propTypes = {
+  tabs: PropTypes.array,
+  selectedTab: PropTypes.string,
+  selectTabhandler: PropTypes.func,
+  tab: PropTypes.string
+};
 
 export default Tab;
